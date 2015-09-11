@@ -24,5 +24,5 @@ A JRE 1.8 or later is required to run the application. Download the zip and unzi
 Clone the sources to a convinient directory & simply point netbeans project browser to that location. Enjoy
 #More ScreenShots
 <p>
-<img src="https://www.dropbox.com/s/54rnkaxvt1zp3qk/color_shot_2.png?raw=1">
+<img src="https://www.dropbox.com/s/l697qw1pjtz0we8/javacolorchart_shot_002.png?raw=1">
 </p>
