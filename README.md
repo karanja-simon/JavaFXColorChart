@@ -3,7 +3,7 @@ A JavaFX, Java 8 based application, that generates 16 million RGB and Hex colors
 Below is a typical screen of the application running, on Windows 7. The L&F may differ depending on how your OS renders the UI components.
 </p>
 <p>
-<img src="https://www.dropbox.com/s/9kxfb2gvwqa424e/color_shot_1.png?raw=1">
+<img src="https://www.dropbox.com/s/doa6k315ibb1740/javacolorchart_shot_007.png?raw=1">
 </p>
 # How to use the application (.jar) / (Running the binaries)
 <p>
