@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="585.0" minWidth="920.0" prefHeight="585.0" prefWidth="920.0" style="-fx-background-color: #9C9B98;" stylesheets="@../css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfxcolorchart.controller.ColorUIController">
+   <children>
+      <AnchorPane prefHeight="585.0" prefWidth="606.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="515.0" prefHeight="70.0" prefWidth="601.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane layoutX="319.0" layoutY="14.0" prefHeight="42.0" prefWidth="398.0" AnchorPane.rightAnchor="14.0">
+                     <children>
+                        <Label fx:id="lblRenderTime" alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="24.0" prefHeight="17.0" prefWidth="392.0" text="Colors Rendering Done in 12 sec" AnchorPane.rightAnchor="7.0" />
+                        <Label fx:id="lblStatus" alignment="CENTER_RIGHT" layoutX="-2.0" prefHeight="17.0" prefWidth="394.0" text="1200 Colors Generated" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="102.0" prefHeight="412.0" prefWidth="606.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="103.0">
+               <children>
+                  <TableView fx:id="tvColors" editable="true" layoutY="106.0" maxWidth="1.7976931348623157E308" minWidth="606.0" prefWidth="606.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="colNo" minWidth="23.0" prefWidth="40.0" resizable="false" text="#" />
+                        <TableColumn fx:id="colR" maxWidth="137.0" minWidth="15.0" prefWidth="52.0" resizable="false" text="R" />
+                        <TableColumn fx:id="colG" maxWidth="74.0" minWidth="20.0" prefWidth="51.0" resizable="false" text="G" />
+                        <TableColumn fx:id="colB" maxWidth="70.0" minWidth="9.0" prefWidth="52.0" resizable="false" text="B" />
+                        <TableColumn fx:id="colHex" maxWidth="111.0" minWidth="67.0" prefWidth="108.0" resizable="false" text="HEX VALUE">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/brush_48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colColor" maxWidth="1.7976931348623157E308" minWidth="301.0" prefWidth="301.0" text="COLOR">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fill_48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </TableColumn>
+                     </columns>
+                     <effect>
+                        <GaussianBlur />
+                     </effect>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="102.0" prefWidth="601.0" style="-fx-background-color: #FFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ProgressBar fx:id="pbLoading" layoutY="76.0" prefHeight="5.0" prefWidth="380.0" progress="0.0" style="-fx-background-insets: 1 1 1 1; -fx-padding: 0.2em;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TextField fx:id="txtSearch" layoutX="383.0" layoutY="41.0" prefHeight="25.0" prefWidth="201.0" promptText="SEARCH COLOR E.G  #FF6757" style="-fx-border-color: white;" AnchorPane.rightAnchor="5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="606.0" maxWidth="227.0" minWidth="227.0" prefHeight="477.0" prefWidth="227.0" style="-fx-background-color: #BEBEBE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Slider fx:id="sliderShade" blockIncrement="0.01" layoutX="17.0" layoutY="368.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="200.0" />
+            <Pane fx:id="paneShadePreview" layoutX="14.0" layoutY="122.0" prefHeight="146.0" prefWidth="200.0" style="-fx-background-color: red;" />
+            <Label layoutX="13.0" layoutY="77.0" prefHeight="17.0" prefWidth="199.0" text="Generate Shades Of Selected Color" />
+            <Separator layoutX="10.0" layoutY="101.0" prefWidth="200.0" />
+            <Separator layoutX="14.0" layoutY="412.0" prefWidth="200.0" />
+            <Label layoutX="17.0" layoutY="388.0" prefHeight="17.0" prefWidth="199.0" text="Color Summary" />
+            <Pane layoutX="85.0" layoutY="419.0" prefHeight="160.0" prefWidth="130.0" style="-fx-background-color: transparent;">
+               <children>
+                  <TextField fx:id="tfR" layoutX="63.0" layoutY="1.0" prefHeight="27.0" prefWidth="57.0" style="-fx-border-color: gray; -fx-background-color: transparent;" text="124" />
+                  <TextField fx:id="tfG" layoutX="64.0" layoutY="34.0" prefHeight="27.0" prefWidth="56.0" style="-fx-border-color: gray; -fx-background-color: transparent;" text=" 234" />
+                  <TextField fx:id="tfB" layoutX="64.0" layoutY="69.0" prefHeight="27.0" prefWidth="56.0" style="-fx-border-color: gray; -fx-background-color: transparent;" text="201" />
+                  <TextField fx:id="tfHex" layoutX="52.0" layoutY="119.0" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: gray; -fx-background-color: transparent;" text="#FF45F2" />
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="44.0" text="R" />
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="44.0" text="G" />
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="44.0" text="B" />
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="120.0" prefHeight="25.0" prefWidth="33.0" text="HEX" />
+                  <Separator layoutX="10.0" layoutY="107.0" prefHeight="0.0" prefWidth="114.0" />
+               </children>
+            </Pane>
+            <Slider fx:id="sliderLighter" blockIncrement="0.01" layoutX="14.0" layoutY="313.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="200.0" />
+            <Label layoutX="16.0" layoutY="280.0" prefHeight="17.0" prefWidth="199.0" text="Lighter Shade" />
+            <Separator layoutX="13.0" layoutY="304.0" prefWidth="200.0" />
+            <Label layoutX="13.0" layoutY="333.0" prefHeight="17.0" prefWidth="199.0" text="Darker Shade" />
+            <Separator layoutX="10.0" layoutY="357.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

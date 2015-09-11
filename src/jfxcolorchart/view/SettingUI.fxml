@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="820.0" stylesheets="@../css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfxcolorchart.controller.SettingsController">
+   <children>
+      <AnchorPane maxHeight="93.0" minHeight="93.0" prefHeight="93.0" prefWidth="820.0" style="-fx-background-color: #DEDEDE; -fx-border-color: transparent transparent gray transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="424.0" layoutY="66.0" prefHeight="17.0" prefWidth="133.0" text="Generator Settings" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="62.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="93.0" prefHeight="437.0" prefWidth="820.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
+         <children>
+            <HBox alignment="CENTER" fillHeight="false" layoutX="125.0" layoutY="87.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="87.0">
+               <children>
+                  <AnchorPane layoutX="54.0" layoutY="37.0" maxWidth="700.0" minWidth="561.0" prefHeight="333.0" prefWidth="571.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="37.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="79.0" layoutY="45.0" prefHeight="17.0" prefWidth="119.0" text="Randomize" />
+                        <Button fx:id="btnSave" layoutX="432.0" layoutY="274.0" maxWidth="92.0" minWidth="30.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="92.0" text="Save" AnchorPane.rightAnchor="47.0" />
+                        <Label fx:id="lblMsg" alignment="CENTER_RIGHT" layoutX="47.0" layoutY="250.0" prefHeight="17.0" prefWidth="473.0" text="Label" textAlignment="RIGHT" />
+                        <TextField fx:id="txtIterations" layoutX="234.0" prefHeight="25.0" prefWidth="161.0" promptText="0 - 255" />
+                        <Label alignment="CENTER_RIGHT" layoutX="79.0" layoutY="4.0" prefHeight="17.0" prefWidth="119.0" text="Iterations" />
+                        <Separator layoutY="89.0" prefHeight="4.0" prefWidth="473.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <CheckBox layoutX="234.0" layoutY="45.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="161.0" selected="true" text="YES" />
+                        <Label layoutX="79.0" layoutY="147.0" prefHeight="55.0" prefWidth="418.0" text="PLEASE NOTE: The maximum Iterations allowable is 255. Use small iterations as possible to reduce the CPU load during color generation. The recommended iterations is &lt; 100" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="74.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
